@@ -29,6 +29,15 @@ public class PideDatos {
 		
 		boolean randomMayorQue = random > limite;
 		System.out.println(randomMayorQue);
+		
+		System.out.println(numero%2==0);
+		
+		System.out.println(calle);
+		calle++;
+		System.out.println(calle);
+		calle +=1;
+		System.out.println(calle);
+		
 	}
 	
 }
