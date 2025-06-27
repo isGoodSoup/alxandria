@@ -14,17 +14,21 @@ public class TiposDeDatos {
         short numero2 = 123;
         int numero = 2300;
         long numero3 = 1890;
+        System.out.println(edad + numero2 + numero + numero3);
 
         // Decimales
         double decimal1 = 9.7;
         float decimal2 = 100.9f;
+        System.out.println(decimal1 + decimal2);
 
         // Caracteres
         char caracter = 'a';
         boolean esMayorEdad = false;
         System.out.println(esMayorEdad);
+        System.out.println(caracter);
         
-
         // Tipos objeto
+        String nombre = "Jose Luis";
+        System.out.println(nombre.toUpperCase());
     }
 }
