@@ -17,10 +17,11 @@ public class PideDatos {
 		scan = new Scanner(System.in);
 		String poblacion = scan.nextLine();
 		
-		System.out.println("La calle es grande:");
 		boolean esCalleGrande = numero > 100;
 		
-		System.out.println(poblacion + ", " + calle + " " + numero + ", " + esCalleGrande);
+		System.out.println(poblacion + ", " + calle + " " + numero);
+		
+		System.out.println("La calle es grande: " + esCalleGrande);
 		
 		double random = Math.random();
 		System.out.println(random);
