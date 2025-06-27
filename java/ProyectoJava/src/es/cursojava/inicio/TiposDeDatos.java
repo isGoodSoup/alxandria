@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class TiposDeDatos {
     
     public static void main( String[] args ) {
@@ -30,5 +32,10 @@ public class TiposDeDatos {
         // Tipos objeto
         String nombre = "Jose Luis";
         System.out.println(nombre.toUpperCase());
+        
+        System.out.println(Math.random());
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Introduce tus apellidos");
+        String apellidos = scan.nextLine();
     }
 }
