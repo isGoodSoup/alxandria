@@ -28,6 +28,7 @@ public class MenuOpciones {
 			
 			System.out.println("Añadir nuevo alumno:");
 			String alumnoNuevo = scan.nextLine();
+			System.out.println("Nuevo alumno registrado: " + alumnoNuevo);
 			
 		} else if (response == 4) {
 			System.out.println("Saliendo...");
