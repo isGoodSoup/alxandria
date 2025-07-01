@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Calculadora {
 	
-	@SuppressWarnings("resource")
+	@SuppressWarnings({ "resource", "unused" })
 	public static void main( String[] args ) {
 		Scanner scan = new Scanner(System.in);
 		
@@ -17,23 +17,27 @@ public class Calculadora {
 		System.out.println("Introduzca la operación a continuación:");
 		String operacion = scan.nextLine();
 		
-		String operacion1 = "suma";
-		String operacion2 = "resta";
-		String operacion3 = "mult";
-		String operacion4 = "division";
+		//String operacion1 = "suma";
+		//String operacion2 = "resta";
+		//String operacion3 = "mult";
+		//String operacion4 = "division";
 
-		if (operacion == operacion1) {
-			int result = (int) (firstNumber + secondNumber);
-			System.out.println(result);
-		} else if (operacion == operacion2) {
-			int result = (int) (firstNumber - secondNumber);
-			System.out.println(result);
-		} else if (operacion == operacion3) {
-			int result = (int) (firstNumber * secondNumber);
-			System.out.println(result);
-		} else if (operacion == operacion4) {
-			int result = (int) (firstNumber / secondNumber);
-			System.out.println(result);
+		// operacion.equals(operacion1) <-- Forma correcta
+		// operacion == operacion1 		<-- Incorrecta
+
+		int resultado = 0;
+		if (operacion.equals("+") || operacion.equalsIgnoreCase("suma")) 
+		{ resultado = firstNumber + secondNumber; } 
+		
+		else if (operacion.equals("-") || operacion.equalsIgnoreCase("resta")) { resultado = firstNumber - secondNumber; } 
+		
+		else if (operacion.equals("*") || operacion.equalsIgnoreCase("mult")) 
+		{ resultado = firstNumber * secondNumber; } 
+			
+		else if (operacion.equals("/") || operacion.equalsIgnoreCase("divide")) { resultado = firstNumber / secondNumber; } 
+		
+		else {
+			System.out.println("Operación no permitida.");
 		}
 
 		
