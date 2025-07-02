@@ -32,7 +32,7 @@ public class PrecioLlamadaCorregido {
             costeTotal += (minutos - 10) * 0.5f;
         }
 
-        System.out.println("Sin impuestos: " + costeTotal);
+        System.out.println("Sin impuestos: " + costeTotal + "€");
 
         double impuesto = switch (dia) {
             case 7 -> 1.03;
@@ -48,6 +48,6 @@ public class PrecioLlamadaCorregido {
 
         double impuestoTotal = impuesto + impuestoHora;
 
-        System.out.println("Con impuestos: " + costeTotal * impuestoTotal);
+        System.out.println("Con impuestos: " + costeTotal * impuestoTotal + "€");
     }
 }
