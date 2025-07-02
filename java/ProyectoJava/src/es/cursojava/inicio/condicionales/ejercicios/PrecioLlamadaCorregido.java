@@ -40,9 +40,9 @@ public class PrecioLlamadaCorregido {
         };
 
         double impuestoHora = switch (hora) {
-            case 6, 12 -> 1.15;
-            case 13, 23 -> 1.10;
-            case 24, 5 -> 0.90;
+            case 6, 7, 8, 9, 10, 11, 12 -> 1.15;
+            case 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23 -> 1.10;
+            case 24, 1, 2, 3, 4, 5 -> -1.10;
             default -> 0;
         };
 
