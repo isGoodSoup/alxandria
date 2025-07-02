@@ -36,7 +36,7 @@ public class MenuOpciones {
 //		} else {
 //			System.out.println("Respuesta no válida.");
 //		}
-
+		// Switch Tradicional
 		switch (response) {
 			case 1 : System.out.println("Pintando cuadrado... □"); break;
 			case 2 : System.out.println("Validando email."); break;
