@@ -6,6 +6,7 @@ public class BucleParesImpares {
         
         int numeroCrecendo = 2;
         int numeroDecrecendo = 99;
+        
         System.out.println(numeroCrecendo + ", " + numeroDecrecendo);
         while (numeroCrecendo > 0) {
             if (numeroCrecendo%2==0) {
