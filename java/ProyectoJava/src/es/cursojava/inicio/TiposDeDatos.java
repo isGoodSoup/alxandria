@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class TiposDeDatos {
     
+    @SuppressWarnings("resource")
     public static void main( String[] args ) {
         // Tipos primitivos 
         // Enteros
