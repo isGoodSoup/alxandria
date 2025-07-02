@@ -41,6 +41,6 @@ public class TiposDeDatos {
         System.out.println("Introduce tu altura");
         double altura = scan.nextDouble();
         
-        System.out.println(nombre + " " + apellidos);
+        System.out.println(nombre + " " + apellidos + " " + altura);
     }
 }
