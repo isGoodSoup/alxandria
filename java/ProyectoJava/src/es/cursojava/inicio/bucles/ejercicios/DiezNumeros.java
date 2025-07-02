@@ -10,10 +10,7 @@ public class DiezNumeros {
         Scanner scan = new Scanner(System.in);
 
         int count = 0;
-
-        int countMultiploDos = 0;
-        int countMultiploTres = 0;
-
+        int countMultiploCinco = 0, countMultiploTres = 0;
         boolean esNumeroDiez = true;
 
         while (esNumeroDiez) {
@@ -26,22 +23,17 @@ public class DiezNumeros {
                 break;
             }
 
-            if (numero%2==0) {
-                countMultiploDos += 1;
+            if (numero%5==0) {
+                countMultiploCinco += 1;
             }
 
             if (numero%3==0) {
                 countMultiploTres += 1;
             }
-
-            if (numero%6==0) {
-                countMultiploDos += 1;
-                countMultiploTres += 1;
-            }
         }
 
         System.out.println("Múltiplos");
-        System.out.println("De 2: " + countMultiploDos);
+        System.out.println("De 5: " + countMultiploCinco);
         System.out.println("De 3: " + countMultiploTres);
     }
 }
