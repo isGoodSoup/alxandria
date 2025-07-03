@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class BucleDoWhile {
 
+    @SuppressWarnings("resource")
     public static void main(String[] args) {
 
         String respuesta = "";
