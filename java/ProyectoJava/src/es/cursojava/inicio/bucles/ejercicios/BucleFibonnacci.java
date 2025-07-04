@@ -8,16 +8,19 @@ public class BucleFibonnacci {
     public static void main( String[] args ) {
         
         Scanner scan = new Scanner(System.in);
-        System.out.println("Nº de números del Radio de Oro (Fibonnacci):");
+        System.out.println("Introduce un número:");
         int numero = scan.nextInt();
+        
         int a = 0, b = 1;
-    
+        int suma = 0;
+
         for (int i = 0; i < numero; i++) {
-            System.out.print(a + " ");
+
+            System.out.print(a + " ");         
             
-            int fibo = a + b;
+            suma = a + b;
             a = b;
-            b = fibo;
+            b = suma;
         }
     }
 }
