@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class SistemaDeApuestas {
 
     static int opcion = 0;
-    @SuppressWarnings("resource")
     public static void main( String[] args ) {
 
         int money = 500, bet = 0, betNumber = 0;
@@ -50,7 +49,6 @@ public class SistemaDeApuestas {
                             if (bet > money) {
 
                                 System.out.println("Salario insuficiente, reformulando;");
-                                continue;
                             } else {
 
                                 System.out.println("Importe apostado: " + bet);
@@ -93,7 +91,7 @@ public class SistemaDeApuestas {
                     } while (money > 0);
                 
                 case 2:
-
+                    
                     break;
 
                 case 3:
