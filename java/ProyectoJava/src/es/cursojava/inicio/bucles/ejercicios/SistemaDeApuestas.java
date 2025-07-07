@@ -105,7 +105,8 @@ public class SistemaDeApuestas {
                                 
                                 Scanner scan2 = new Scanner(System.in);
                                 betNumber = scan2.nextInt();
-                                
+                                scan2.close();
+
                                 if (betNumber > 100) {
                                     System.out.println("Número inválido, reformulando;");
                                     
@@ -173,6 +174,7 @@ public class SistemaDeApuestas {
                                 
                                 Scanner scan3 = new Scanner(System.in);
                                 numberType = scan3.nextLine();
+                                scan3.close();
                                 
                                 String even = "par";
                                 String odd = "impar";
@@ -258,6 +260,7 @@ public class SistemaDeApuestas {
                     break;
                 }
             }
+            scan.close();
         } while (opcion != 5);
     }
 }
