@@ -7,5 +7,6 @@ public class HolaMundo {
         int numero = 10;
 
         System.out.println("Resultado: " + edad + numero);
+        System.out.println("Nuevo cambio");
     }
 }
