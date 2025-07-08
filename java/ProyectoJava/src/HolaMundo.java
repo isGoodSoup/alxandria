@@ -8,5 +8,6 @@ public class HolaMundo {
 
         System.out.println("Resultado: " + edad + numero);
         System.out.println("Nuevo cambio");
+        System.out.println("Hola, nueva línea");
     }
 }
