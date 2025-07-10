@@ -18,7 +18,7 @@ public class StringsVocales {
             char ch = string.charAt(i);
             
             if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
-                i++;
+                vowels++;
             }
         }
 
