@@ -20,7 +20,7 @@ public class StringsPalindromo {
 
         System.out.println("=====================");
 
-        if (isPalindrome == true) {
+        if (isPalindrome) {
             System.out.println("Es un palíndromo");
         } else {
             System.out.println("No es un palíndromo");
