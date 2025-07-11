@@ -15,6 +15,10 @@ public class StringsValidarEmail {
 			System.out.println("Introduce tu email:"); System.out.print("-- ");
 			String email = scan.nextLine();
 
+			if (email.equals("quit")) {
+				break;
+			}
+
 			for (int i = 0; i < email.length(); i++) {
 				
 				char ch = email.charAt(i);
@@ -41,14 +45,19 @@ public class StringsValidarEmail {
 				System.out.println("- Contiene más de una arroba");
 			}
 
-			for (int i = 0; i < email.length(); i++) {
-
-				if (email.contains(".")) {
+			if (isThereAt) {
+				
+				int atPos = email.indexOf('@');
+				if (atPos + 2 < email.length() && email.indexOf('.', atPos + 2) != -1) {
 					
-				}
+					isThereDot = true;
+					System.out.println("+ Contiene un punto válido");
 
+				} else {
+					System.out.println("- No contiene un punto donde debe");
+				}
 			}
 
-		} while (isThereSpaces || !isThereAt || isThereDot);
+		} while (isThereSpaces || !isThereAt || !isThereDot);
 	}
 }
