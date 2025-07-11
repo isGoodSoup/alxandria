@@ -9,12 +9,14 @@ public class StringsValidarEmail {
 		Scanner scan = new Scanner(System.in);
 		
 		int atCount = 0;
-		boolean isThereAt = false, isThereSpaces = false, isThereDot = false;
+		boolean isThereAt = false, isThereSpaces = false, isTherePeriod = false;
 
 		do {
 			System.out.println("Introduce tu email:"); System.out.print("-- ");
 			String email = scan.nextLine();
-
+			
+			email = email.trim();
+			
 			if (email.equals("quit")) {
 				break;
 			}
@@ -26,7 +28,7 @@ public class StringsValidarEmail {
 				if (ch == ' ') {
 
 					isThereSpaces = true;
-					System.out.println("- Contiene espacios en blanco");
+					System.out.println("El email no puede contener espacios en blanco");
 					break;
 				}
 			}	
@@ -39,10 +41,10 @@ public class StringsValidarEmail {
 			}
 
 			if (atCount == 1) {
-				System.out.println("+ Contiene una arroba");
+				System.out.println("El email tiene una arroba");
 				isThereAt = true;
 			} else {
-				System.out.println("- Contiene más de una arroba");
+				System.out.println("El email tiene más de una arroba");
 			}
 
 			if (isThereAt) {
@@ -50,14 +52,19 @@ public class StringsValidarEmail {
 				int atPos = email.indexOf('@');
 				if (atPos + 2 < email.length() && email.indexOf('.', atPos + 2) != -1) {
 					
-					isThereDot = true;
-					System.out.println("+ Contiene un punto válido");
+					isTherePeriod = true;
+					System.out.println("El email tiene un punto");
 
 				} else {
-					System.out.println("- No contiene un punto donde debe");
+					System.out.println("El email no tiene un punto");
 				}
 			}
+			
+			
 
-		} while (isThereSpaces || !isThereAt || !isThereDot);
+		} while (isThereSpaces || !isThereAt || !isTherePeriod);
+			
+		System.out.println();
+		System.out.println(">> El email ha sido validado");
 	}
 }
