@@ -3,7 +3,7 @@ package arrays.ejercicios;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class ArraysAlumnosNota {
+public class ArraysEjercicio1 {
 
     public static void main( String[] args ) {
         
