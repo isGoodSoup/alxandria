@@ -63,6 +63,7 @@ public class ArrayColegioAlumnos {
 						Scanner scan3 = new Scanner(System.in);
 						String search = scan3.nextLine();
 						search = search.trim();
+						boolean noNameFound = false;
 						
 						for (int i = 0; i < class1.length; i++) {
 							
@@ -72,7 +73,7 @@ public class ArrayColegioAlumnos {
 									
 									if (class1[i][j] == null) {
 										
-										System.out.println("No hay ningún alumno con ese nombre");
+										noNameFound = true;
 									} else if (class1[i][j].contains(search)) {
 
 										System.out.println("Alumno encontrado: " + class1[i][j] + " se encuentra en clase " + i + " y puesto " + j);
@@ -81,6 +82,10 @@ public class ArrayColegioAlumnos {
 									
 								} while (class1[i][j] != null);
 							}
+						}
+						
+						if (noNameFound) {
+							System.out.println("No hay ningún alumno con ese nombre");
 						}
 						
 						break;
