@@ -67,7 +67,7 @@ public class ArrayColegioAlumnos {
 									
 									if (class1[i][j].contains(search)) {
 
-										System.out.println("Alumno encontrado: " + class1[i][j]);
+										System.out.println("Alumno encontrado: " + class1[i][j] + " se encuentra en clase " + i + " y puesto " + j);
 										break;
 									}
 									
