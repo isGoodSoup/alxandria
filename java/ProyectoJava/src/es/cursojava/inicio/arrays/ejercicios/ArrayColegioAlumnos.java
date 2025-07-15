@@ -19,20 +19,26 @@ public class ArrayColegioAlumnos {
 			
 			switch (option) {
 			
-				case 1: for (int i = 0; i < class1.length; i++) {
-							
+				case 1: boolean areThereSpots = false;
+						for (int i = 0; i < class1.length; i++) {
+					
 							for (int j = 0; j < class1[i].length; j++) {
 								
-								if (class1[i][j] != null) {
-									System.out.println("Puesto ocupado");
-								} else {
+								if (class1[i][j] == null) {
+									
 									System.out.println("Nombre de alumno: ");
 									Scanner scan2 = new Scanner(System.in);
 									String name = scan2.nextLine();
 									name = name.trim();
 									class1[i][j] = name;
+									
+									areThereSpots = true;
 								}
 							}
+						}
+						
+						if (!areThereSpots) {
+							System.out.println("No hay puestos libres\n");
 						}
 						
 						break;
