@@ -23,14 +23,13 @@ public class ArrayColegioAlumnos {
 							
 							for (int j = 0; j < class1[i].length; j++) {
 								
-								System.out.println("Nombre de alumno: ");
-								Scanner scan2 = new Scanner(System.in);
-								String name = scan2.nextLine();
-								name = name.trim();
-								
 								if (class1[i][j] != null) {
 									System.out.println("Puesto ocupado");
 								} else {
+									System.out.println("Nombre de alumno: ");
+									Scanner scan2 = new Scanner(System.in);
+									String name = scan2.nextLine();
+									name = name.trim();
 									class1[i][j] = name;
 								}
 							}
@@ -65,14 +64,13 @@ public class ArrayColegioAlumnos {
 								
 								do {
 									
-									if (class1[i][j].contains(search)) {
+									if (class1[i][j] == null) {
+										
+										System.out.println("No hay ningún alumno con ese nombre");
+									} else if (class1[i][j].contains(search)) {
 
 										System.out.println("Alumno encontrado: " + class1[i][j] + " se encuentra en clase " + i + " y puesto " + j);
 										break;
-									}
-									
-									if (class1[i][j] == null) {
-										System.out.println("No hay ningún alumno con ese nombre");
 									}
 									
 								} while (class1[i][j] != null);
@@ -88,9 +86,11 @@ public class ArrayColegioAlumnos {
 						for (int i = 0; i < class1.length; i++) {
 					
 							for (int j = 0; j < class1[i].length; j++) {
-
-								if (class1[i][j].equals(nameDelete)) {
-									
+								
+								if (class1[i][j] == null) {
+									System.out.println("No hay ningún alumno con ese nombre");
+									break;
+								} else if (class1[i][j].equals(nameDelete)) {
 									class1[i][j] = null;
 								}
 							}
