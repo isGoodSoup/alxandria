@@ -34,7 +34,8 @@ public class Calculadora {
 		else if (operacion.equals("*") || operacion.equalsIgnoreCase("mult")) 
 		{ resultado = firstNumber * secondNumber; } 
 			
-		else if (operacion.equals("/") || operacion.equalsIgnoreCase("divide")) { resultado = firstNumber / secondNumber; } 
+		else if (operacion.equals("/") || operacion.equalsIgnoreCase("divide")) 
+		{ resultado = firstNumber / secondNumber; } 
 		
 		else {
 			System.out.println("Operación no permitida.");
