@@ -8,6 +8,11 @@ public class MetodosEjercicio3 {
 
 	public static void main(String[] args) {
 		
+		double[] data = rectData();
+
+		for (double spec : data) {
+			System.out.print(spec + ", ");
+		}
 	}
 	
 	public static double[] rectData() {
