@@ -24,6 +24,8 @@ public class Calculadora {
 					
 					System.out.println();
 					int number = Integer.parseInt(args[i]);
+					System.out.print(number + " ");
+					System.out.println();
 					
 					if (operator.equalsIgnoreCase("suma")) {
 						result += number;
